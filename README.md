@@ -18,5 +18,6 @@ The Frontend Developer Career Path aims to teach you everything you need to beco
 - edit 2
 - helloworld
 - dfdf
+- arc
 
 Happy Coding!
