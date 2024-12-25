@@ -3,27 +3,71 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
+    <!-- 1. Create a scoreboard with the following elements: -->
         <div class="container">
             <div id="home">
                 <h3 class="board-title-home">HOME</h3>
+                <img id="home-logo" src="pngwing.com.png" alt="home-logo">
                 <div class="score">
-                    <p class="scorenum" id="homescore">0</p>
-                </div>
-                <div class="increase">
-                    <button class="press" id="+1" onclick="incrementhome1()">+1</button>
-                    <button class="press" id="+2" onclick="incrementhome2()">+2</button>
-                    <button class="press" id="+3" onclick="incrementhome3()">+3</button>
+                    <p class="scorenum" id="homescore">210</p>
+                    <p class="scorenum score-background ">000</p>
                 </div>
             </div>
+            <div id="timer">
+                <div id="time">
+                    <h3 id="board-title-time">TIME</h3>
+                    <div id="clock">
+                        <p id="timerscore">00:00</p>
+                        <p id="timerscorebg">00:00</p>
+                    </div>    
+                </div>
+                <div id="qtr">
+                    <h3 id="board-title-qtr">QTR</h3>
+                    <div id="quarter">
+                        <p id="qtrscore">1</p>
+                        <p id="qtrscorebg">0</p>
+                    </div>
+                </div>
+            </div>      
             <div id="guest">
                 <h3 class="board-title-home">GUEST</h3>
+                <img id="guest-logo" src="pngwing.com.png" alt="guest-logo">
                 <div class="score">
-                    <p class="scorenum" id="guestscore">0</p>
+                    <p class="scorenum" id="guestscore">120</p>
+                    <p class="scorenum score-background ">000</p>
                 </div>
-                <div class="increase">
-                    <button class="press" id="+1" onclick="incrementguest1()">+1</button>
-                    <button class="press" id="+2" onclick="incrementguest2()">+2</button>
-                    <button class="press" id="+3" onclick="incrementguest3()">+3</button>
+            </div> 
+        </div>
+
+    <!--  2. Create a control board with the following elements:-->
+        <div id="controlboard">
+            <h3 id="board-title-control">CONTROL BOARD</h3>
+            <div id="grouptop">
+                <div>
+                    <p class="classinput"> Home: <input type="text" id="team1" placeholder="Paste logo link"></p>
+                    <button class="press" onclick="incrementhome1()">+1</button>
+                    <button class="press" onclick="incrementhome2()">+2</button>
+                    <button class="press" onclick="incrementhome3()">+3</button>
+                </div>
+                <div>
+                    <p class="classinput"> Guest: <input type="text" id="team2" placeholder="Paste logo link"></p>
+                    <button class="press" onclick="incrementguest1()">+1</button>
+                    <button class="press" onclick="incrementguest2()">+2</button>
+                    <button class="press" onclick="incrementguest3()">+3</button>
+                </div>
+            </div>
+            <div id="groupbot">
+                <div>
+                    <button class="press1" onclick="start()">Start/Stop Time</button>
+                </div>
+                <div>
+                    <button class="press1" onclick="reset()">Reset Time</button>
+                </div>
+                <div>
+                    <button class="press1" onclick="incrementqtr()">Quarter+</button>
+                </div>
+                <div>
+                    <button class="press1" onclick="resetall()">Reset Board</button>
                 </div>
             </div>
         </div>
